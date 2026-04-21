@@ -21,7 +21,6 @@ const Signup = () => {
     setErrors({ ...errors, [name]: "" });
   };
 
-  // Validate form fields
   const validate = () => {
     const errs = {};
     if (!values.username) errs.username = "Username is required";
@@ -32,7 +31,7 @@ const Signup = () => {
     return Object.keys(errs).length === 0;
   };
 
-  // Handle form submission
+
   const handleSubmit = async () => {
     if (!validate()) return;
 

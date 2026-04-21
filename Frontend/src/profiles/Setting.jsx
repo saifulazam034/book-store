@@ -8,10 +8,10 @@ const Setting = () => {
 
   const headers = {
     id: localStorage.getItem("id"),
-    authorization: `Bearer ${localStorage.getItem("token")}`, // ✅ fixed
+    authorization: `Bearer ${localStorage.getItem("token")}`, 
   };
 
-  // 🔹 Fetch user
+ 
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -30,12 +30,12 @@ const Setting = () => {
     fetchUser();
   }, []);
 
-  // 🔹 Handle change
+
   const handleChange = (e) => {
     setValue({ ...value, address: e.target.value });
   };
 
-  // 🔹 Update address
+
   const updateProfile = async () => {
     try {
       const res = await axios.put(
